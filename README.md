@@ -9,4 +9,11 @@ Download Wallpapers from alphacoders.com and wallpaperaccess.com
   
   $ cd wallpaper-downloader
   
-  $ chmod +x wp-coder.sh && chomd +x curl-wp.sh
+  $ chmod +x wp-coder.sh && chmod +x curl-wp.sh
+
+**Installing**
+
+.. code-block::
+
+  $ ./wp-coder.sh <URL>
+  $ ./curl-wp.sh <URL>
