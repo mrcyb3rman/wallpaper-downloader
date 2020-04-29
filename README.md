@@ -16,4 +16,5 @@ Download Wallpapers from alphacoders.com and wallpaperaccess.com
 .. code-block::
 
   $ ./wp-coder.sh <URL>
+  
   $ ./curl-wp.sh <URL>
