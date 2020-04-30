@@ -55,19 +55,4 @@ then
     done
 else
 	echo "[!] Only Support [1] alphcoders.com & [2] wallpaperaccess.com"
-fi	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+fi
