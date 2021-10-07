@@ -2,14 +2,15 @@
 
 site1="coders"
 site2="access"
+site3="bat"
 
 if [[ $1 == "" ]]
 then
 	echo
-	echo "<--- WallPaper Download: alphacoders.com, wallpaperaccess.com --->"
+	echo "<--- WallPaper Download: alphacoders.com, wallpaperaccess.com, wallpaperbat.com --->"
 	echo
-	echo "[!] Usage   : ./wp-coder.sh <URL>"
-	echo "[!] Exemple : ./wp-coder.sh https://wall.alphacoders.com/search.php?search=batman"
+	echo "[!] Usage   : ./wp-down.sh <URL>"
+	echo "[!] Example : ./wp-down.sh https://wall.alphacoders.com/by_collection.php?id=39"
 elif [[ $1 == *$site1* ]]
 then
 	echo
@@ -53,6 +54,28 @@ then
     do 
     	echo '[+] Getting Image '$(echo $image | cut -d '/' -f3); curl -OJL -s 'https://wallpaperaccess.com'$image
     done
+elif [[ $1 == *$site3* ]]
+then
+	echo
+    echo "[+] Target     : $1"
+    echo "[+] Start Time : $(date)"
+    echo
+    
+    name=`echo $1 | cut -d '/' -f4`
+    mkdir $name && cd $name
+    
+    echo "[+] Getting Images..."
+    
+    len=$(curl -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0' -s $1 | grep '/down/' | grep 'href' | cut -d '"' -f2 | sort | uniq | wc -l)
+    
+    echo "[+] $len Image found"
+    echo "[+] Downloading Images..."
+    echo
+    
+    for image in $(curl -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0' -s $1 | grep '/down/' | grep 'href' | cut -d '"' -f2 | sort | uniq)
+    do 
+    	echo '[+] Getting Image '$(echo $image | cut -d '/' -f3); curl -OJL -s 'https://wallpaperbat.com'$image
+    done
 else
-	echo "[!] Only Support [1] alphcoders.com & [2] wallpaperaccess.com"
+	echo "[!] Only Support [1] alphcoders.com & [2] wallpaperaccess.com & [3] wallpaperbat.com"
 fi
