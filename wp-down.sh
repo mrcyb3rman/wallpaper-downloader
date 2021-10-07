@@ -10,7 +10,7 @@ then
 	echo "<--- WallPaper Download: alphacoders.com, wallpaperaccess.com, wallpaperbat.com --->"
 	echo
 	echo "[!] Usage   : ./wp-down.sh <URL>"
-	echo "[!] Example : ./wp-down.sh https://wall.alphacoders.com/search.php?search=batman"
+	echo "[!] Example : ./wp-down.sh https://wall.alphacoders.com/by_collection.php?id=39"
 elif [[ $1 == *$site1* ]]
 then
 	echo
