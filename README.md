@@ -1,18 +1,34 @@
 # wallpaper-downloader
-Download Wallpapers from alphacoders.com and wallpaperaccess.com
 
-**Installing**
+Download wallpapers from [alphacoders.com](https://alphacoders.com/), [wallpaperaccess.com](https://wallpaperaccess.com) and [wallpaperbat.com](https://wallpaperbat.com)
 
-.. code-block::
+## Installing
 
-  $ git clone https://github.com/mrcyb3rman/wallpaper-downloader.git
-  
-  $ cd wallpaper-downloader
-  
-  $ chmod +x wp-down.sh
+Clone repo
+```
+git clone https://github.com/mrcyb3rman/wallpaper-downloader.git
+```
 
-**Installing**
+Enter to folder
+```
+cd wallpaper-downloader
+```
 
-.. code-block::
+Make the script executable
+```
+chmod +x wp-down.sh
+```
 
-  $ ./wp-down.sh <URL>
+## Usage
+
+### Syntax
+
+```
+./wp-down.sh <URL>
+```
+
+### Example
+
+```
+./wp-down.sh https://wallpaperbat.com/cyberpunk-neon-city-wallpapers
+```
