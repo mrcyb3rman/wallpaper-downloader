@@ -6,29 +6,39 @@ Download wallpapers from [alphacoders.com](https://alphacoders.com/), [wallpaper
 
 Clone repo
 ```
-git clone https://github.com/mrcyb3rman/wallpaper-downloader.git
+  git clone https://github.com/hasecilu/wallpaper-downloader.git
 ```
 
 Enter to folder
 ```
-cd wallpaper-downloader
+  cd wallpaper-downloader
 ```
 
 Make the script executable
 ```
-chmod +x wp-down.sh
+  chmod +x wp-down.sh
 ```
+<details>
+
+ <summary>PRO TIP</summary>
+  
+Create the alias 
+```
+  x='chmod +x'
+```
+in your .aliases file
+</details>
 
 ## Usage
 
 ### Syntax
 
 ```
-./wp-down.sh <URL>
+  ./wp-down.sh <URL>
 ```
 
 ### Example
 
 ```
-./wp-down.sh https://wallpaperbat.com/cyberpunk-neon-city-wallpapers
+  ./wp-down.sh https://wallpaperbat.com/cyberpunk-neon-city-wallpapers
 ```
